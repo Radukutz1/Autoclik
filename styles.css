@@ -43,22 +43,78 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.topbar {
-  padding: 22px 32px 0;
+.site-header {
+  padding: 18px 32px 0;
 }
 
-.brand {
-  display: inline-block;
-  font-size: 1.4rem;
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(12, 22, 32, 0.7);
+}
+
+.logo-slot {
+  min-width: 140px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
-  color: var(--primary);
+  opacity: 0.8;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  opacity: 1;
 }
 
 .hero {
-  padding: 60px 32px 70px;
+  padding: 110px 32px 70px;
   text-align: center;
+}
+
+.hero-content {
+  animation: riseIn 1s ease-out;
+}
+
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .eyebrow {
@@ -155,13 +211,62 @@ h1 {
   color: var(--text);
 }
 
+.page-content {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 90px 32px 70px;
+  text-align: left;
+}
+
+.page-content h1 {
+  margin-bottom: 18px;
+}
+
+.page-content p,
+.page-content li {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.03rem;
+}
+
+.page-content a {
+  color: var(--secondary);
+}
+
+.page-content .link-card {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(138, 180, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
-  .topbar {
+  .site-header {
     padding: 18px 24px 0;
   }
 
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
   .hero {
-    padding: 42px 22px 56px;
+    padding: 72px 22px 56px;
+  }
+
+  .page-content {
+    padding: 70px 22px 56px;
   }
 
   .cta-button {
