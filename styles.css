@@ -44,33 +44,32 @@ body {
 }
 
 .site-header {
-  padding: 18px 32px 0;
+  padding: 22px 32px 0;
 }
 
-.top-nav {
+.top-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  min-height: 72px;
-  padding: 14px 18px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: rgba(12, 22, 32, 0.7);
+  min-height: 70px;
+  padding: 18px 16px;
+  border: 1px solid rgba(110, 159, 212, 0.42);
+  border-radius: 14px;
+  background: rgba(3, 22, 34, 0.68);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
 .logo-slot {
-  min-width: 140px;
-  min-height: 40px;
+  min-width: 120px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 12px;
-  border-radius: 10px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   font-size: 0.72rem;
   font-weight: 700;
   opacity: 0.8;
@@ -80,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 24px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
@@ -88,7 +87,7 @@ body {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: opacity 0.2s ease;
 }
 
@@ -98,7 +97,7 @@ body {
 }
 
 .hero {
-  padding: 110px 32px 70px;
+  padding: 54px 32px 70px;
   text-align: center;
 }
 
@@ -121,20 +120,20 @@ body {
   margin: 0 0 16px;
   color: var(--secondary);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-size: clamp(2.7rem, 4.7vw, 5rem);
   line-height: 1.08;
   letter-spacing: -0.05em;
 }
 
 .subtitle {
-  width: min(700px, 100%);
+  width: min(720px, 100%);
   margin: 18px auto 0;
   font-size: 1.08rem;
   line-height: 1.7;
@@ -153,6 +152,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 280px;
   min-height: 62px;
   padding: 0 30px;
   border-radius: 16px;
@@ -250,7 +250,7 @@ h1 {
     padding: 18px 24px 0;
   }
 
-  .top-nav {
+  .top-banner {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -271,5 +271,6 @@ h1 {
 
   .cta-button {
     width: 100%;
+    min-width: 0;
   }
 }
