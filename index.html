@@ -10,23 +10,19 @@
     <title>Autoclik | Desktop AutoClicker & Browser Extension</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="top-banner">
-          <div class="logo-slot" aria-label="Logo placeholder">LOGO</div>
+    <!-- Centered, large logo -->
+    <header class="site-header animated-section">
+      <div class="logo-large" aria-label="Logo placeholder">AUTOCLIK</div>
+    </header>
 
-          <nav class="main-nav" aria-label="Main navigation">
-            <a href="about.html">About us</a>
-            <a href="other-tools.html">Other tools</a>
-          </nav>
-        </div>
-      </header>
-
+    <!-- Content shell with delayed animation -->
+    <div class="page-shell animated-section shell-delay">
       <main class="hero">
-        <div class="hero-content">
+        <div class="hero-content delayed-content">
           <p class="eyebrow">AUTOMATE THE REPETITIVE WORK</p>
-          <h1>Power up your clicks with Autoclik.</h1>
+          <h1>Power up your clicks with Autoclik</h1>
           <p class="subtitle">
             Download the desktop autoclicker for full control or install the browser
             extension for quick, lightweight automation.
@@ -62,5 +58,11 @@
         </div>
       </main>
     </div>
+
+    <!-- Navigation moved to the bottom -->
+    <footer class="bottom-nav animated-section nav-delay">
+      <a href="about.html">About us</a>
+      <a href="other-tools.html">Other tools</a>
+    </footer>
   </body>
 </html>
