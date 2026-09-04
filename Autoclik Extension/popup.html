@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Base setup with glowing abstract orbs */
+    body { 
+      width: 240px; 
+      margin: 0;
+      padding: 25px 20px; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      text-align: center; 
+      background-color: #0f172a;
+      
+      /* Glowing orbs to give the glass something to blur */
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.4), transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.4), transparent 50%);
+      color: #e2e8f0;
+    }
+    
+    /* True Frosted Glass */
+    .glass-panel {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      
+      /* Specular highlights on top and left edges */
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 { 
+      margin: 0 0 15px 0; 
+      font-size: 24px; 
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      
+      /* Metallic/Gradient text effect */
+      background: linear-gradient(to right, #ffffff, #a5b4fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+
+    #status { 
+      font-size: 12px;
+      font-weight: 700; 
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #ff8a8a; 
+      margin-bottom: 20px; 
+      background: rgba(0,0,0,0.25);
+      padding: 6px 14px;
+      border-radius: 20px;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .input-group { 
+      margin: 15px 0 20px 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      gap: 12px; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    input { 
+      width: 65px; 
+      text-align: center; 
+      background: rgba(0, 0, 0, 0.25);
+      
+      /* Inset styling */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(0, 0, 0, 0.4);
+      border-left: 1px solid rgba(0, 0, 0, 0.4);
+      
+      color: #f8fafc;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: all 0.2s;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    input:focus {
+      outline: none;
+      background: rgba(0, 0, 0, 0.4);
+      border-color: rgba(99, 102, 241, 0.5);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.4), 0 0 10px rgba(99, 102, 241, 0.2);
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    button { 
+      width: 100%; 
+      padding: 14px; 
+      font-size: 15px;
+      font-weight: 800; 
+      letter-spacing: 1px;
+      cursor: pointer; 
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      color: #f8fafc;
+      border-radius: 10px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.05);
+    }
+
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Shortcut Hint Styling */
+    .shortcut-hint {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #94a3b8;
+      letter-spacing: 0.5px;
+    }
+
+    kbd {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin: 0 2px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="glass-panel">
+    <h2>AutoClik</h2>
+    <div id="status">Status: Stopped</div>
+    
+    <div class="input-group">
+      <label>Seconds:</label>
+      <input type="number" id="interval" value="1.0" min="0.1" step="0.1">
+    </div>
+
+    <button id="toggleBtn">START</button>
+    
+    <div class="shortcut-hint">
+      Hotkey: <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
