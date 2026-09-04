@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -14,47 +14,117 @@
   <meta property="og:url" content="https://autoclik.net/about" />
   <meta property="og:title" content="About Us | Autoclik" />
   <meta property="og:description" content="Learn more about Autoclik and our lightweight automation tools." />
+  <meta property="og:image" content="https://autoclik.net/og-image.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="/icon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="top-banner">
-          <div class="logo-slot" aria-label="Logo placeholder">LOGO</div>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000; /* Fully black background */
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
 
-          <nav class="main-nav" aria-label="Main navigation">
-            <a href="about.html">About us</a>
-             <a href="https://www.image-cut.com" target="_blank" rel="noopener noreferrer">Other tools</a>
-          </nav>
-        </div>
-      </header>
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
 
-      <main class="page-content">
-        <h1>About us</h1>
-        <p>
-          Autoclik is built for people who want to automate repetitive digital tasks
-          without dealing with complicated workflows or expensive software suites.
-          Our mission is to make automation accessible, practical, and dependable for
-          individuals and teams alike.
-        </p>
-        <p>
-          We focus on simple tools that save time and reduce manual effort. Whether
-          someone needs a desktop autoclicker for repeated actions or a lightweight
-          browser extension for quicker workflows, Autoclik is designed to help users
-          move faster and work smarter.
-        </p>
-        <p>
-          Our platform brings together straightforward design, productivity-focused
-          functionality, and a user experience built around efficiency. We believe the
-          best automation tools are the ones that get out of the way and let people do
-          more meaningful work.
-        </p>
-      </main>
-    </div>
-  </body>
+    /* Styles for the new image logo */
+    .logo-image {
+      max-width: 220px;
+      height: auto;
+      border-radius: 50%; /* Smooths the edges of the square image file */
+      box-shadow: 0 0 40px rgba(139, 0, 0, 0.15); /* Adds a very faint red glow to match the logo ring */
+    }
+
+    /* Frosted Glass Document Container */
+    .glass-container {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px 50px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.9);
+      margin-bottom: 60px;
+    }
+
+    .glass-container h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 10px;
+    }
+
+    .glass-container p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .glass-container { padding: 30px 20px; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Replacing the text placeholder with your image asset -->
+    <img src="Icons/Logo Autoclik.jpg" alt="Autoclik Logo" class="logo-image">
+  </header>
+
+  <main class="glass-container">
+    <a href="index.html" class="back-link">&larr; Back to AutoClik</a>
+
+    <h1>About AutoClik</h1>
+    <p>AutoClik was born out of a simple necessity: the need for a fast, reliable, and strictly private automation tool that stays out of your way.</p>
+    
+    <p>Developed by <a href = "www.image-cut.com" target = "_blank"> Image Cut </a>, AutoClik follows the same core philosophy as our other web utilities like image-cut.com—focusing entirely on providing clean, zero-dependency tools that perform their tasks entirely locally, without tracking your data or compromising your security.</p>
+
+    <p>Whether you're using the Windows desktop client for heavy-duty tasks or the lightweight browser extension for quick automation, the goal remains the same: power up your workflow while respecting your system's resources.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Răducu-Alin Stratu. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
